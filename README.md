@@ -1,10 +1,13 @@
-# Python Wyze SDK
+# Python Wyze SDK (Fork)
+
+> **Note: This is a fork of the original [wyze-sdk](https://github.com/shauntarves/wyze-sdk) by Shaun Tarves**
+>
+> Install this fork with: `uv pip install wyze-sdk-aldilaff`
+
 A modern Python client for controlling Wyze devices.
 
 [![PyPI version][pypi-image]][pypi-url]
 [![Python Version][python-version]][pypi-url]
-[![Read the Docs][support-docs]][docs-url]
-
 
 Whether you're building a custom app, or integrating into a third-party service like Home Assistant, Wyze Developer Kit for Python allows you to leverage the flexibility of Python to get your project up and running as quickly as possible.
 
@@ -47,14 +50,14 @@ python3 --version
 We recommend using [PyPI][pypi] to install the Wyze Developer Kit for Python.
 
 ```bash
-$ pip install wyze-sdk
+$ uv pip install wyze-sdk-aldilaff
 ```
 
 ### Basic Usage of the Web Client
 
 ---
 
-Wyze does not provide a Web API that gives you the ability to build applications that interact with Wyze devices. This Development Kit is a reverse-engineered, module-based wrapper that makes interaction with that API possible. We have a few basic examples here with some of the more common uses but you are encouraged to [explore the full range of methods](https://wyze-sdk.readthedocs.io/en/latest/wyze_sdk.api.devices.html) available to you.
+Wyze does not provide a Web API that gives you the ability to build applications that interact with Wyze devices. This Development Kit is a reverse-engineered, module-based wrapper that makes interaction with that API possible. We have a few basic examples here with some of the more common uses but you are encouraged to explore the full range of methods available to you.
 
 #### Authenticating
 
@@ -213,7 +216,7 @@ try:
   client.bulbs.set_brightness(device_mac=bulb.mac, device_model=bulb.product.model, brightness=100)
   client.bulbs.set_color(device_mac=bulb.mac, device_model=bulb.product.model, color='ff00ff')
   client.bulbs.set_color_temp(device_mac=bulb.mac, device_model=bulb.product.model, color_temp=3800)
-  
+
   bulb = client.bulbs.info(device_mac='ABCDEF1234567890')
   assert bulb.brightness == 100
   assert bulb.color == 'ff00ff'
@@ -284,9 +287,9 @@ except WyzeApiError as e:
 
 <!-- Markdown links -->
 
-[pypi-image]: https://badge.fury.io/py/wyze-sdk.svg
-[pypi-url]: https://pypi.org/project/wyze-sdk/
-[python-version]: https://img.shields.io/pypi/pyversions/wyze-sdk.svg
+[pypi-image]: https://badge.fury.io/py/wyze-sdk-aldilaff.svg
+[pypi-url]: https://pypi.org/project/wyze-sdk-aldilaff/
+[python-version]: https://img.shields.io/pypi/pyversions/wyze-sdk-aldilaff.svg
 [pypi]: https://pypi.org/
 [gh-issues]: https://github.com/shauntarves/wyze-sdk/issues
 [support-docs]: https://img.shields.io/badge/support-docs-brightgreen

@@ -22,14 +22,14 @@ needs_pytest = {"pytest", "test", "ptr"}.intersection(sys.argv)
 pytest_runner = ["pytest-runner"] if needs_pytest else []
 
 setup(
-    name='wyze_sdk',
+    name='wyze-sdk-aldilaff',
     version=__version__,
-    description='The Wyze Labs API Platform SDK for Python.',
+    description='The Wyze Labs API Platform SDK for Python (fork with HL_A19C2 support).',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/shauntarves/wyze-sdk",
-    author='Shaun Tarves',
-    author_email='shaun@tarves.net',
+    url="https://github.com/aldilaff/wyze-sdk",
+    author='Faisal Aldilaijan (fork), Shaun Tarves (original)',
+    author_email='github@faisal.software',
     python_requires=">=3.8.0",
     include_package_data=True,
     license="The Unlicense",
